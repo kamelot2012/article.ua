@@ -1,5 +1,8 @@
 <?php
-require_once __DIR__ . '/classes/DB.php';
-$db = new DB;
-$items = $db->query('SELECT * FROM articles');
-var_dump($items);
+require_once __DIR__ . '/models/News.php';
+
+$items = News::getAll();
+
+//var_dump($items);
+
+include_once __DIR__ . '/views/articles.php';
