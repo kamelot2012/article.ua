@@ -16,7 +16,7 @@ class DB
     public function __construct(){
         $this->DB_connect();
     }
-    public function query($sql, $class = 'stdClass'){
+    public function queryAll($sql, $class = 'stdClass'){
         $res = mysqli_query($this->link, $sql);
         if (false === $res){
             return false;
@@ -26,5 +26,8 @@ class DB
             $ret[] = $row;
         }
         return $ret;
+    }
+    public function queryOne($sql, $class = 'stdClass'){
+    return $this->queryAll($sql, $class)[0];
     }
 }
