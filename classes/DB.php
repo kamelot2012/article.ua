@@ -28,6 +28,10 @@ class DB
         return $ret;
     }
     public function queryOne($sql, $class = 'stdClass'){
-    return $this->queryAll($sql, $class)[0];
+        return $this->queryAll($sql, $class)[0];
+    }
+    public function insertOne($sql){
+        $result = mysqli_query($this->link, $sql);
+        return $result;
     }
 }

@@ -3,6 +3,8 @@
     <br>
     <?php echo $item->title;?>
     <br>
+    <?php echo $item->content;?>
+    <br>
     <?php echo $item->date;?>
     <hr>
 
