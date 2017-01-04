@@ -1,6 +1,6 @@
 <?php
 
-abstract class AbstractModel
+abstract class AbstractModel implements IModel
 {
     public $id;
     public $title;
